@@ -2,6 +2,8 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+> NOTE: The canonical source of the documentation is in the [libretime/libretime](https://github.com/libretime/libretime/tree/main/docs) repository. Please propose your changes over there instead of here.
+
 ### Installation
 
 ```
