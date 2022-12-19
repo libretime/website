@@ -1,7 +1,9 @@
+const latestVersion = "3.0.0";
+
 module.exports = {
   title: "LibreTime",
   description: "Radio Broadcast & Automation Platform",
-  version: "3.0.0",
+  version: latestVersion,
   website: "https://libretime.org",
 
   repository: {
@@ -22,7 +24,7 @@ module.exports = {
   home: {
     links: [
       { label: "Get started 🚀", to: "/docs/admin-manual" },
-      { label: "Release note", to: "/docs/releases/3.0.0" },
+      { label: "Release note", to: `/docs/releases/${latestVersion}` },
     ],
   },
 
