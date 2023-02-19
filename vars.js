@@ -13,12 +13,12 @@ module.exports = {
 
   forum: {
     href: "https://discourse.libretime.org",
-    label: "Discourse",
+    label: "Forum",
   },
 
   channel: {
     href: "https://chat.libretime.org",
-    label: "Mattermost",
+    label: "Chat",
   },
 
   home: {
