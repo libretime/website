@@ -47,6 +47,10 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: `${vars.repository.href}/blob/main/docs`,
 
+          versions: {
+            stable: { label: "Stable" },
+          },
+
           async sidebarItemsGenerator({
             defaultSidebarItemsGenerator,
             ...args
