@@ -92,7 +92,7 @@ const config = {
             type: "dropdown",
             items: vars.doc.sections,
           },
-          { label: "Contribute", to: "/contribute", position: "left" },
+          { label: "Contribute", to: "/docs/contribute", position: "left" },
           { label: "Blog", to: "blog", position: "left" },
 
           { ...vars.repository, position: "right" },
