@@ -18,8 +18,8 @@ If you are coming from **Airtime**, please follow the [Airtime migration guide](
 
 You can install LibreTime using the one of the following methods:
 
-- [:rocket: Using the installer](#using-the-installer)
 - [:rocket: Using docker-compose](#using-docker-compose)
+- [:rocket: Using the installer](#using-the-installer)
 - :construction: Using ansible
 
 ### Minimum system requirements
@@ -218,12 +218,6 @@ Next, continue by [configuring your installation](#configure).
 
 ## Using docker-compose
 
-:::warning
-
-The docker-compose install is still a work in progress and is **EXPERIMENTAL**, breaking changes may occur without notice.
-
-:::
-
 ### Download
 
 Pick the version you want to install:
@@ -245,7 +239,33 @@ wget "https://raw.githubusercontent.com/libretime/libretime/$LIBRETIME_VERSION/d
 
 ### Setup
 
-Once the files are downloaded, edit the [configuration file](./configuration.md) at `./config.yml` to fill required information and to match your needs.
+Once the files are downloaded, generate a set of random passwords for the different docker services used by LibreTime:
+
+```bash
+echo "# Postgres
+POSTGRES_PASSWORD=$(openssl rand -hex 16)
+
+# RabbitMQ
+RABBITMQ_DEFAULT_PASS=$(openssl rand -hex 16)
+
+# Icecast
+ICECAST_SOURCE_PASSWORD=$(openssl rand -hex 16)
+ICECAST_ADMIN_PASSWORD=$(openssl rand -hex 16)
+ICECAST_RELAY_PASSWORD=$(openssl rand -hex 16)" >> .env
+cat .env
+```
+
+:::info
+
+You can find more details in the `docker-compose.yml` file or on the external services docker specific documentation:
+
+- [Postgres](https://hub.docker.com/_/postgres)
+- [RabbitMQ](https://hub.docker.com/_/rabbitmq)
+- [Icecast](https://github.com/libretime/icecast-docker#readme)
+
+:::
+
+Next, edit the [configuration file](./configuration.md) at `./config.yml` to set the previously generated passwords, fill required information, and to match your needs.
 
 :::info
 
