@@ -19,7 +19,7 @@ A **lot** of work has been put into LibreTime to finalize the forking from AirTi
 
 ## Versions, and supported distributions releases
 
-We drafted a [supported distributions releases and versions support policy](/docs/developer-manual/development/releases#distributions-releases-support), that will help us to know when to drop support for distributions releases, and help you to plan for a distributions upgrades.
+We drafted a [supported distributions releases and versions support policy](/docs/contributor-manual/releases#distributions-releases-support), that will help us to know when to drop support for distributions releases, and help you to plan for a distributions upgrades.
 
 The important bits are:
 
