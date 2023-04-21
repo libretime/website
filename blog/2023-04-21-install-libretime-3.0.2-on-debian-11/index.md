@@ -655,4 +655,4 @@ To configure the station, go to **Settings** > **General** and fill the desired 
 
 ## Feedback
 
-I hope this tutorial was helpful, feel free to make a comment [on the forum](https://discourse.libretime.org/t/tutorials-how-to-install-libretime-3-0-2-on-debian-11/).
+I hope this tutorial was helpful, feel free to make a comment [on the forum](https://discourse.libretime.org/t/tutorial-how-to-install-libretime-3-0-2-on-debian-11/1463).
