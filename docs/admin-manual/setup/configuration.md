@@ -1,6 +1,6 @@
 ---
 title: Configuration
-sidebar_position: 5
+sidebar_position: 20
 ---
 
 To configure LibreTime, you need to edit the `/etc/libretime/config.yml` file. This page describe the available options to configure your installation.
@@ -42,9 +42,6 @@ general:
   # The internal API authentication key.
   # > this field is REQUIRED
   api_key: "some_random_generated_secret!"
-  # The Django API secret key. If not defined, the value of [general.api_key] will be
-  # used as fallback.
-  secret_key: "some_random_generated_secret!"
 
   # List of origins allowed to access resources on the server,
   # the [general.public_url] origin is automatically included.
@@ -210,13 +207,6 @@ liquidsoap:
   # Input harbor listen address.
   # > default is ["0.0.0.0"]
   harbor_listen_address: ["0.0.0.0"]
-
-  # Input harbor tls certificate path.
-  harbor_ssl_certificate:
-  # Input harbor tls certificate private key path.
-  harbor_ssl_private_key:
-  # Input harbor tls certificate password.
-  harbor_ssl_password:
 ```
 
 ## Stream
@@ -282,9 +272,6 @@ stream:
       # Listen port for the main harbor input.
       # > default is 8001
       port: 8001
-      # Whether the input harbor is secured with the tls certificate.
-      # > default is false
-      secure: false
 
     # Show harbor input.
     show:
@@ -297,9 +284,6 @@ stream:
       # Listen port for the show harbor input.
       # > default is 8002
       port: 8002
-      # Whether the input harbor is secured with the tls certificate.
-      # > default is false
-      secure: false
 ```
 
 ### Outputs
@@ -468,7 +452,7 @@ stream:
 
 ## LDAP
 
-The `ldap` section provide additional configuration for the authentication mechanism defined in `general.auth`, please see the [custom authentication documentation](./custom-authentication.md) for more details.
+The `ldap` section provide additional configuration for the authentication mechanism defined in `general.auth`, please see the [custom authentication documentation](../custom-authentication.md) for more details.
 
 ```yml
 ldap:

@@ -47,21 +47,21 @@ Please read the `pg_dump` usage for additional details.
 
 You need to backup the entire file storage, which holds all the files of your installation.
 
-The path to your storage is defined in the [configuration](./configuration.md) file.
+The path to your storage is defined in the [configuration](./setup/configuration.md) file.
 
 ## Restore a backup
 
 ### Install or cleanup
 
-If you are restoring a backup on a fresh system, we recommend that you first [install LibreTime](./install/README.md), and **stop before the [setup tasks](./install/README.md#setup)**.
+If you are restoring a backup on a fresh system, we recommend that you first [install LibreTime](./setup/install.md), and **stop before the [setup tasks](./setup/install.md#setup)**.
 
 If you are restoring a backup on an existing system, make sure to clean the old **database** and **files storage**.
 
 ### Restore the configuration
 
-Copy the backed configuration files back to the [configuration](./configuration.md) folder.
+Copy the backed configuration files back to the [configuration](./setup/configuration.md) folder.
 
-If you are upgrading LibreTime, edit the configuration file to match the new configuration schema and update any changed values. See the [configuration](./configuration.md) documentation for more details.
+If you are upgrading LibreTime, edit the configuration file to match the new configuration schema and update any changed values. See the [configuration](./setup/configuration.md) documentation for more details.
 
 ### Restore the database
 
@@ -89,10 +89,10 @@ to database or role that have different names.
 
 :::
 
-If you are upgrading LibreTime, make sure to apply the [database migration](./install/upgrade.md#apply-migrations).
+If you are upgrading LibreTime, make sure to apply the [database migration](./setup/upgrade.md#apply-migrations).
 
 ### Restore the storage
 
 Copy the entire backed file storage back to the storage path.
 
-The path to your storage is defined in the [configuration](./configuration.md) file.
+The path to your storage is defined in the [configuration](./setup/configuration.md) file.
