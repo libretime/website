@@ -39,7 +39,7 @@ The path to your storage was defined during the installation process, the defaul
 
 ## Install
 
-Install LibreTime on a new system by [running the installer](./install.md#run-the-installer), and **don't run the setup tasks**.
+Install LibreTime on a new system by [running the installer](./README.md#run-the-installer), and **don't run the setup tasks**.
 
 ## Restore the backup
 
@@ -49,7 +49,7 @@ You have to restore the **database**, the **files storage** and the **configurat
 
 ## Update the configuration files
 
-Update the configuration file to match the new configuration schema and update any changed values. See the [configuration](./configuration.md) documentation for more details.
+Update the configuration file to match the new configuration schema and update any changed values. See the [configuration](../configuration.md) documentation for more details.
 
 Edit the Icecast password in `/etc/icecast2/icecast.xml` to reflect the password used in Airtime.
 
