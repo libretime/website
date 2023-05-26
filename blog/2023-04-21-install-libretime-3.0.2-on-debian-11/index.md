@@ -7,6 +7,10 @@ tags: [tutorials]
 
 import CodeBlock from '@theme/CodeBlock';
 
+> **Updated 2023.05.26:**
+>
+> - Use a reverse proxy to simplify the LibreTime nginx configuration upgrade.
+
 The lack of guides to setup a secure LibreTime server has been a weakness of documentation for a long time now. Users had to search bits and pieces on the Internet, which was probably frustrating. So here is a tutorial that should give a base for anyone that wants to setup a secure LibreTime server.
 
 Note that, I also included the essence of this lengthy post in [the official documentation](https://libretime.org/docs/admin-manual/), make sure to have a look.
@@ -139,7 +143,7 @@ tar -xvf libretime-3.0.2.tar.gz && cd libretime
 To install LibreTime, run the installer and make sure to replace `libretime.example.org` with your own domain name:
 
 ```bash
-sudo ./install https://libretime.example.org
+sudo ./install --listen-port 8080 https://libretime.example.org
 ```
 
 import logs from 'raw-loader!./install-logs.txt'
@@ -380,12 +384,6 @@ libretime-api.socket                loaded active running   LibreTime API Socket
 libretime.target                    loaded active active    LibreTime Services
 ```
 
-:::warning
-
-LibreTime should be accessible at http://libretime.example.org (insecure `http` url), but you **won't** be able to login, as we set a secure `https` url in the LibreTime `general.public_url` configuration.
-
-:::
-
 ## 3. Securing LibreTime
 
 ### 3.1. Install Certbot
@@ -419,21 +417,38 @@ Dec 26 21:57:01 demo systemd[1]: Started Run certbot twice daily.
 
 ### 3.2. Prepare Nginx for obtaining a certificate
 
-Next, edit the LibreTime Nginx configuration to add the `server_name` configuration:
+Next, you have to configure a reverse proxy to route the traffic from port `80` to LibreTime (port `8080`).
+
+Copy the following in a new Nginx configuration file, make sure to replace `libretime.example.org` with your own domain name:
 
 ```bash
-sudo nano /etc/nginx/sites-available/libretime.conf
+sudo nano /etc/nginx/sites-available/libretime.example.org.conf
 ```
 
-```git title="/etc/nginx/sites-available/libretime.conf"
- server {
-   listen 80;
-   listen [::]:80;
-+
-+  server_name libretime.example.org;
+```nginx title="/etc/nginx/sites-available/libretime.example.org.conf"
+server {
+  listen 80;
+  listen [::]:80;
 
-   access_log /var/log/nginx/libretime.access.log;
-   error_log /var/log/nginx/libretime.error.log;
+  server_name libretime.example.org;
+
+  location / {
+    proxy_set_header Host              $host;
+    proxy_set_header X-Real-IP         $remote_addr;
+    proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host  $host;
+    proxy_set_header X-Forwarded-Port  $server_port;
+
+    proxy_pass http://localhost:8080/;
+  }
+}
+```
+
+Enable the new reverse proxy configuration, make sure to replace `libretime.example.org` with your own domain name:
+
+```bash
+sudo ln -s /etc/nginx/sites-{available,enabled}/libretime.example.org.conf
 ```
 
 Then, check that the nginx config is valid and reload nginx:
@@ -493,8 +508,8 @@ http-01 challenge for libretime.example.org
 Waiting for verification...
 Cleaning up challenges
 # highlight-start
-Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/libretime.conf
-Redirecting all traffic on port 80 to ssl in /etc/nginx/sites-enabled/libretime.conf
+Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/libretime.example.org.conf
+Redirecting all traffic on port 80 to ssl in /etc/nginx/sites-enabled/libretime.example.org.conf
 # highlight-end
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
