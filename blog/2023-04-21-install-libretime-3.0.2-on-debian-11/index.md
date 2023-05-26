@@ -10,6 +10,7 @@ import CodeBlock from '@theme/CodeBlock';
 > **Updated 2023.05.26:**
 >
 > - Use a reverse proxy to simplify the LibreTime nginx configuration upgrade.
+> - Fix the Icecast certificates bundle command.
 
 The lack of guides to setup a secure LibreTime server has been a weakness of documentation for a long time now. Users had to search bits and pieces on the Internet, which was probably frustrating. So here is a tutorial that should give a base for anyone that wants to setup a secure LibreTime server.
 
@@ -538,11 +539,11 @@ By default, browsers will [prevent loading mixed content](https://developer.mozi
 Create a Icecast specific SSL certificate bundle:
 
 ```bash
-sudo install \
+sudo bash -c "install \
   --group=icecast \
   --mode=640 \
   <(cat /etc/letsencrypt/live/libretime.example.org/{fullchain,privkey}.pem) \
-  /etc/icecast2/bundle.pem
+  /etc/icecast2/bundle.pem"
 ```
 
 Enable the secure socket and set the SSL certificate bundle path in the Icecast configuration file:
@@ -579,9 +580,8 @@ sudo nano /etc/icecast2/icecast.xml
          <alias source="/" destination="/status.xsl"/>
          <!-- The certificate file needs to contain both public and private part.
               Both should be PEM encoded.
--        <ssl-certificate>/usr/share/icecast2/icecast.pem</ssl-certificate>
--        -->
-+        -->
+         <ssl-certificate>/usr/share/icecast2/icecast.pem</ssl-certificate>
+         -->
 +        <ssl-certificate>/etc/icecast2/bundle.pem</ssl-certificate>
      </paths>
 ```
