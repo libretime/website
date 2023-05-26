@@ -1,4 +1,4 @@
-demo@demo:~/libretime# sudo ./install https://libretime.example.org
+demo@demo:~/libretime# sudo ./install --listen-port 8080 https://libretime.example.org
 
   ██╗     ██╗██████╗ ██████╗ ███████╗████████╗██╗███╗   ███╗███████╗
   ██║     ██║██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██║████╗ ████║██╔════╝
