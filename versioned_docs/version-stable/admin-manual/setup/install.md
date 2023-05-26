@@ -46,7 +46,7 @@ LibreTime requires the following default ports to be open:
 
 The installer is shipped in the released tarballs or directly in the project repository.
 
-We recommend installing on one of the following [distribution releases](../../contributor-manual/releases.md#distributions-releases-support):
+We recommend installing on one of the following [distribution releases](../../developer-manual/development/releases.md#distributions-releases-support):
 
 - [Debian 11](https://www.debian.org/releases/)
 - [Ubuntu 20.04 LTS](https://wiki.ubuntu.com/Releases)
@@ -147,12 +147,6 @@ sudo ./install PUBLIC_URL
 :::caution
 
 When upgrading be sure to run the installer using the same arguments you used during the initial install.
-
-:::
-
-:::warning
-
-To update the LibreTime nginx configuration file, for example to change the `--listen-port`, make sure to add the `--update-nginx` flag to allow overwriting the existing configuration file.
 
 :::
 
