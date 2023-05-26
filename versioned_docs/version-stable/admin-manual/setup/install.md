@@ -18,8 +18,8 @@ If you are coming from **Airtime**, please follow the [Airtime migration guide](
 
 You can install LibreTime using the one of the following methods:
 
-- [:rocket: Using the installer](#using-the-installer)
 - [:rocket: Using docker-compose](#using-docker-compose)
+- [:rocket: Using the installer](#using-the-installer)
 - :construction: Using ansible
 
 ### Minimum system requirements
@@ -150,6 +150,12 @@ When upgrading be sure to run the installer using the same arguments you used du
 
 :::
 
+:::warning
+
+To update the LibreTime nginx configuration file, for example to change the `--listen-port`, make sure to add the `--update-nginx` flag to allow overwriting the existing configuration file.
+
+:::
+
 If you need to change some configuration, the install script can be configured using flags or environment variables. Changing the listening port of LibreTime or whether you want to install some dependency by yourself, you could run the following:
 
 ```bash
@@ -211,12 +217,6 @@ sudo systemctl --all --plain | grep libretime
 Next, continue by [configuring your installation](#configure).
 
 ## Using docker-compose
-
-:::warning
-
-The docker-compose install is still a work in progress and is **EXPERIMENTAL**, breaking changes may occur without notice.
-
-:::
 
 ### Download
 
