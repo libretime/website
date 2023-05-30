@@ -17,7 +17,7 @@ module.exports = {
   },
 
   channel: {
-    href: "https://chat.libretime.org",
+    href: "https://matrix.to/#/#libretime:matrix.org",
     label: "Chat",
   },
 
