@@ -20,7 +20,7 @@ function HomepageHeader() {
             <Link
               className={clsx(
                 "button button--secondary button--lg",
-                styles.buttonPadding
+                styles.buttonPadding,
               )}
               to={link.to}
             >
