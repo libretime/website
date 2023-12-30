@@ -1,6 +1,6 @@
 const latestVersion = "3.1.0";
 
-module.exports = {
+export default {
   title: "LibreTime",
   description: "Radio Broadcast & Automation Platform",
   version: latestVersion,
