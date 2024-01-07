@@ -11,5 +11,14 @@
       "matchUpdateTypes": ["patch"],
       "automerge": true
     }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^vars\\.js$"],
+      "matchStrings": ["latestVersion = \"(?<currentValue>.+)\";"],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "libretime/libretime"
+    }
   ]
 }
