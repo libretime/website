@@ -1,4 +1,4 @@
-const latestVersion = "3.1.0";
+const latestVersion = "3.2.1";
 
 module.exports = {
   title: "LibreTime",
