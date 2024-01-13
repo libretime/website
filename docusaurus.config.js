@@ -48,6 +48,7 @@ const config = {
           editUrl: `${vars.repository.href}/blob/main/docs`,
 
           versions: {
+            "stable-4.x": { label: "Stable 4.x" },
             "stable-3.x": { label: "Stable 3.x" },
           },
 
