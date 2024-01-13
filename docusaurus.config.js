@@ -48,7 +48,7 @@ const config = {
           editUrl: `${vars.repository.href}/blob/main/docs`,
 
           versions: {
-            stable: { label: "Stable" },
+            "stable-3.x": { label: "Stable 3.x" },
           },
 
           async sidebarItemsGenerator({
