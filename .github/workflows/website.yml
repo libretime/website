@@ -30,7 +30,7 @@ jobs:
           cache: yarn
           cache-dependency-path: ./yarn.lock
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: .docusaurus
           key: docusaurus-main-${{ github.sha }}
