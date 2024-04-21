@@ -19,7 +19,7 @@
     "@docusaurus/core": "^2.0.1",
     "@docusaurus/plugin-client-redirects": "^2.0.1",
     "@docusaurus/preset-classic": "^2.0.1",
-    "@mdx-js/react": "^1.6.21",
+    "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "mdx-mermaid": "^1.2.3",
     "mermaid": "^10.0.0",
