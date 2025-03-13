@@ -40,6 +40,9 @@ jobs:
       - name: Install
         run: yarn install --frozen-lockfile
 
+      - name: Install Playwright browsers
+        run: yarn playwright install --with-deps chromium
+
       - name: Build
         run: yarn build
 
@@ -47,6 +50,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
+
+      - name: Take screenshots with Playwright
+        run: yarn workspace argos screenshot
+
+      - name: Upload screenshots to Argos
+        if: github.repository_owner == 'libretime'
+        run: yarn workspace argos upload
 
   deploy:
     name: Deploy
