@@ -17,7 +17,7 @@ To have a better understanding of the next steps, please read the following docu
 
 - [Upgrade documentation](./upgrade.md)
 - [Backup documentation](../backup.md)
-- [Install documentation](./install-using-the-installer.md)
+- [Install documentation](./install-using-the-installer.mdx)
 
 ## Make a backup
 
