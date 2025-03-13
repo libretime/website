@@ -42,7 +42,7 @@ Those feature might be reimplemented in the future, any contribution are welcome
 
 ## Running inside containers
 
-This has been awaited for quite some time: you can now [run LibreTime inside containers](/docs/admin-manual/setup/install#using-docker-compose) :tada: ! A [docker-compose example](https://github.com/libretime/libretime/tree/main/docker/example) is available in the repository.
+This has been awaited for quite some time: you can now [run LibreTime inside containers](/docs/admin-manual/install/install-using-docker/) :tada: ! A [docker-compose example](https://github.com/libretime/libretime/tree/main/docker/example) is available in the repository.
 
 Please help us test it and give us feedback, we really appreciate any help!
 
