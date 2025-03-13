@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "screenshot": "playwright test",
-    "upload": "yarn @argos-ci/cli upload ./screenshots"
+    "upload": "npx @argos-ci/cli upload ./screenshots"
   },
   "devDependencies": {
     "@argos-ci/cli": "^0.6.0",
