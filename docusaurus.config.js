@@ -34,6 +34,7 @@ const config = {
 
   markdown: {
     mermaid: true,
+    format: "detect",
     mdx1Compat: {
       comments: false,
       admonitions: false,
