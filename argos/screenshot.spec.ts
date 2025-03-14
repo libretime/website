@@ -18,7 +18,7 @@ function waitForDocusaurusHydration() {
 
 // Do not screenshot versioned docs
 function isVersionedDocsPathname(pathname: string): boolean {
-  return pathname.match(/^\/docs\/((\d\.\d\.\d)|(next))\//);
+  return pathname.match(/^\/docs\/(?!next\/)(.*?)\//);
 }
 
 function screenshotPathname(pathname: string) {
