@@ -1,3 +1,5 @@
+[![Covered by Argos Visual Testing](https://argos-ci.com/badge.svg)](https://app.argos-ci.com/paddatrapper/website/reference?utm_source=[team-name]&utm_campaign=oss)
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
