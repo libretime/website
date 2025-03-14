@@ -5,7 +5,7 @@ authors:
 tags: [tutorials]
 ---
 
-import CodeBlock from '@theme/CodeBlock';
+import CodeBlock from "@theme/CodeBlock";
 
 > **Updated 2023.05.26:**
 >
@@ -16,7 +16,7 @@ The lack of guides to setup a secure LibreTime server has been a weakness of doc
 
 Note that, I also included the essence of this lengthy post in [the official documentation](https://libretime.org/docs/admin-manual/), make sure to have a look.
 
-<!--truncate-->
+{/* truncate */}
 
 This tutorial will walk you through the steps required to install LibreTime from a freshly created server, to a fully working and secure installation.
 
@@ -147,11 +147,11 @@ To install LibreTime, run the installer and make sure to replace `libretime.exam
 sudo ./install --listen-port 8080 https://libretime.example.org
 ```
 
-import logs from 'raw-loader!./install-logs.txt'
+import logs from "raw-loader!./install-logs.txt";
 
 <details>
-<summary>Show the install logs</summary>
-<CodeBlock>{logs}</CodeBlock>
+  <summary>Show the install logs</summary>
+  <CodeBlock>{logs}</CodeBlock>
 </details>
 
 ### 2.3. Configure LibreTime
