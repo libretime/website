@@ -19,14 +19,14 @@ A **lot** of work has been put into LibreTime to finalize the forking from AirTi
 
 ## Versions, and supported distributions releases
 
-We drafted a [supported distributions releases and versions support policy](/docs/contributor-manual/releases#distributions-releases-support), that will help us to know when to drop support for distributions releases, and help you to plan for a distributions upgrades.
+We drafted a [supported distributions releases and versions support policy](/docs/releases/#distributions-releases-support), that will help us to know when to drop support for distributions releases, and help you to plan for a distributions upgrades.
 
 The important bits are:
 
 - New LibreTime releases will only target the current stable distributions releases.
 - Maintenance only releases will provide bug and security fixes for old stable distributions releases until they reach their end of life.
 
-Note that the [release note for LibreTime `v3.0.0-beta.0`](/docs/releases/3.0.0-beta.0/#-deprecation-and-removal) announced some major deprecation.
+Note that the [release note for LibreTime `v3.0.0-beta.0`](/docs/releases/3.0.0-beta.0/#fire-deprecation-and-removal) announced some major deprecation.
 
 ## What is missing from AirTime ?
 
@@ -42,7 +42,7 @@ Those feature might be reimplemented in the future, any contribution are welcome
 
 ## Running inside containers
 
-This has been awaited for quite some time: you can now [run LibreTime inside containers](/docs/admin-manual/setup/install#using-docker-compose) :tada: ! A [docker-compose example](https://github.com/libretime/libretime/tree/main/docker/example) is available in the repository.
+This has been awaited for quite some time: you can now [run LibreTime inside containers](/docs/admin-manual/install/install-using-docker/) :tada: ! A [docker-compose example](https://github.com/libretime/libretime/tree/main/docker/example) is available in the repository.
 
 Please help us test it and give us feedback, we really appreciate any help!
 

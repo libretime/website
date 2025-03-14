@@ -32,6 +32,18 @@ const config = {
     ],
   ],
 
+  markdown: {
+    mermaid: true,
+    format: "detect",
+    mdx1Compat: {
+      comments: false,
+      admonitions: false,
+      headingIds: false,
+    },
+  },
+
+  themes: ["@docusaurus/theme-mermaid"],
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -122,7 +134,7 @@ const config = {
         copyright: `Code licensed under AGPLv3; docs licensed under GPLv2.`,
       },
       prism: {
-        additionalLanguages: ["apacheconf", "ini", "nginx"],
+        additionalLanguages: ["apacheconf", "ini", "nginx", "bash"],
       },
     }),
 };

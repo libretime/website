@@ -16,6 +16,11 @@ function waitForDocusaurusHydration() {
   return document.documentElement.dataset.hasHydrated === "true";
 }
 
+// Do not screenshot versioned docs
+function isVersionedDocsPathname(pathname: string): boolean {
+  return pathname.match(/^\/docs\/(?!next\/)(.*?)\//);
+}
+
 function screenshotPathname(pathname: string) {
   test(`pathname ${pathname}`, async ({ page }) => {
     const url = siteUrl + pathname;
@@ -27,7 +32,9 @@ function screenshotPathname(pathname: string) {
 }
 
 test.describe("Docusaurus site screenshots", () => {
-  const pathnames = extractSitemapPathnames(sitemapPath);
+  const pathnames = extractSitemapPathnames(sitemapPath).filter(
+    isVersionedDocsPathname,
+  );
   console.log("Pathnames to screenshot:", pathnames);
   pathnames.forEach(screenshotPathname);
 });
