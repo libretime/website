@@ -343,6 +343,11 @@
     debug "^4.4.0"
     openapi-fetch "0.13.4"
 
+"@argos-ci/browser@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@argos-ci/browser/-/browser-3.0.1.tgz#c5673e9e21d86a6f30215632b53fc8714c7504ed"
+  integrity sha512-dqRXWCllulbKlqzwNE2bjbCtNqxVnUUrYpI1iIJQCMvyStmPdGHOYD7BoQQQ2uNPT2pCHeDyysrxc5T3mDyScg==
+
 "@argos-ci/cli@^2.0.0":
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/@argos-ci/cli/-/cli-2.5.5.tgz#0edeef04bee868de9114339aa3cb823192b6b0c4"
@@ -367,10 +372,16 @@
     sharp "^0.33.5"
     tmp "^0.2.3"
 
-"@argos-ci/playwright@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@argos-ci/playwright/-/playwright-0.0.7.tgz#af8ba506415a9685e213bbc20379f4eb31615d95"
-  integrity sha512-E+v943CBVrw0HhX3yI36fUqHbyBoWDpxSM0wsU4D5NMijnlL5sA9LVqHz6pfTJ8JbFaA4zBtbiVMHK9xCuPObg==
+"@argos-ci/playwright@^4.0.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@argos-ci/playwright/-/playwright-4.1.0.tgz#9f3b30ab039c6cca4cf036f31c16ef81fea3319d"
+  integrity sha512-7/6/fRQvs/ZObZG76qNVHRyv5nK21oBLxzzd8T1OmJMC/+UmV9omiuOO3x75H5kc5e3vlKsCc0hClFCqtbye7A==
+  dependencies:
+    "@argos-ci/browser" "3.0.1"
+    "@argos-ci/core" "3.1.0"
+    "@argos-ci/util" "2.3.0"
+    chalk "^5.4.1"
+    debug "^4.4.0"
 
 "@argos-ci/util@2.3.0":
   version "2.3.0"
@@ -4185,7 +4196,7 @@ chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^5.0.1, chalk@^5.2.0, chalk@^5.3.0:
+chalk@^5.0.1, chalk@^5.2.0, chalk@^5.3.0, chalk@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.4.1.tgz#1b48bf0963ec158dce2aacf69c093ae2dd2092d8"
   integrity sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==
