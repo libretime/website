@@ -343,6 +343,19 @@
     debug "^4.4.0"
     openapi-fetch "0.13.4"
 
+"@argos-ci/api-client@0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@argos-ci/api-client/-/api-client-0.8.1.tgz#332ba16cad462d73ac2b91e7c205ff74ba21a42a"
+  integrity sha512-3IHv7ANSPNO6OwWgwULlHbP9/tFV9kQDu6+nL9jysfPkGj0GgtrOsyBb+iU931c7wSMo1OD+XNujCnRzDD968w==
+  dependencies:
+    debug "^4.4.0"
+    openapi-fetch "0.13.5"
+
+"@argos-ci/browser@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@argos-ci/browser/-/browser-4.0.0.tgz#39a4ecd39945177f2f25167be497f200f6782987"
+  integrity sha512-ZE5bbQHMVooQRPYU5h+Lw/6panR7pkJxZpIy3k+UvrfVDqC/Qyo4lsUyz07vKooLISL/o9p6X+xGqC1pXbqI8w==
+
 "@argos-ci/cli@^2.0.0":
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/@argos-ci/cli/-/cli-2.5.5.tgz#0edeef04bee868de9114339aa3cb823192b6b0c4"
@@ -367,15 +380,40 @@
     sharp "^0.33.5"
     tmp "^0.2.3"
 
-"@argos-ci/playwright@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@argos-ci/playwright/-/playwright-0.0.7.tgz#af8ba506415a9685e213bbc20379f4eb31615d95"
-  integrity sha512-E+v943CBVrw0HhX3yI36fUqHbyBoWDpxSM0wsU4D5NMijnlL5sA9LVqHz6pfTJ8JbFaA4zBtbiVMHK9xCuPObg==
+"@argos-ci/core@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@argos-ci/core/-/core-3.1.1.tgz#54ebc90f719a102ca1fe85230ec49452b678491a"
+  integrity sha512-7iE3o1XGxlfHC5AF05pzT0OxuO387sryrZt3gKGj/e+6R20DXz7J49yI8++nQ2cuT+wLhcJp8+X0ox+SGMYHmw==
+  dependencies:
+    "@argos-ci/api-client" "0.8.1"
+    "@argos-ci/util" "2.3.1"
+    axios "^1.8.4"
+    convict "^6.2.4"
+    debug "^4.4.0"
+    fast-glob "^3.3.3"
+    sharp "^0.33.5"
+    tmp "^0.2.3"
+
+"@argos-ci/playwright@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@argos-ci/playwright/-/playwright-5.0.0.tgz#054126968ae5d6b7fcc1c58991d42e882fe3f259"
+  integrity sha512-w8eBWE1G6DyHmJODd1+8snXyQv+yut6PJLnH8EpF9HZ/8czg4tLqKagxoqT96jtEU1uMtlPqHqt3QKv+lenl+g==
+  dependencies:
+    "@argos-ci/browser" "4.0.0"
+    "@argos-ci/core" "3.1.1"
+    "@argos-ci/util" "2.3.1"
+    chalk "^5.4.1"
+    debug "^4.4.0"
 
 "@argos-ci/util@2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@argos-ci/util/-/util-2.3.0.tgz#43c04d1df3bcf9766ac100e6d0c00cbd73765dbe"
   integrity sha512-tkxnCpaj7yN9nCFzo9MX0FJ5YjUepEOGYfdvF8COQqp+EdY1qubOPpc4Z0l1B60BlC8YtjQv/oRxHSh1XzxWFg==
+
+"@argos-ci/util@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@argos-ci/util/-/util-2.3.1.tgz#bccaf867c605d5a5554b9573d3e26cc319ce17c5"
+  integrity sha512-kE61HU2480fbAnimmA4x9HK45ZJvkoqLdW5GxT5uvwhkclQykVd2S6WfGFUr3JokTXfZ5LZEEfoWgtGA316KSQ==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.24.7", "@babel/code-frame@^7.8.3":
   version "7.24.7"
@@ -3830,6 +3868,15 @@ axios@^1.7.9:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
+axios@^1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.8.4.tgz#78990bb4bc63d2cae072952d374835950a82f447"
+  integrity sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 b4a@^1.6.4:
   version "1.6.7"
   resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.6.7.tgz#a99587d4ebbfbd5a6e3b21bdb5d5fa385767abe4"
@@ -4185,7 +4232,7 @@ chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^5.0.1, chalk@^5.2.0, chalk@^5.3.0:
+chalk@^5.0.1, chalk@^5.2.0, chalk@^5.3.0, chalk@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.4.1.tgz#1b48bf0963ec158dce2aacf69c093ae2dd2092d8"
   integrity sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==
@@ -9030,6 +9077,13 @@ openapi-fetch@0.13.4:
   version "0.13.4"
   resolved "https://registry.yarnpkg.com/openapi-fetch/-/openapi-fetch-0.13.4.tgz#18ebee9c83855e143a65ad15e33204e200c9541e"
   integrity sha512-JHX7UYjLEiHuQGCPxa3CCCIqe/nc4bTIF9c4UYVC8BegAbWoS3g4gJxKX5XcG7UtYQs2060kY6DH64KkvNZahg==
+  dependencies:
+    openapi-typescript-helpers "^0.0.15"
+
+openapi-fetch@0.13.5:
+  version "0.13.5"
+  resolved "https://registry.yarnpkg.com/openapi-fetch/-/openapi-fetch-0.13.5.tgz#805606860d85b8ba8c2e7cb36ea30b473d8065d9"
+  integrity sha512-AQK8T9GSKFREFlN1DBXTYsLjs7YV2tZcJ7zUWxbjMoQmj8dDSFRrzhLCbHPZWA1TMV3vACqfCxLEZcwf2wxV6Q==
   dependencies:
     openapi-typescript-helpers "^0.0.15"
 
