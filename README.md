@@ -1,4 +1,4 @@
-[![Covered by Argos Visual Testing](https://argos-ci.com/badge.svg)](https://app.argos-ci.com/paddatrapper/website/reference?utm_source=libretime&utm_campaign=oss)
+[![Covered by Argos Visual Testing](https://argos-ci.com/badge-large.svg)](https://app.argos-ci.com/paddatrapper/website/reference?utm_source=libretime&utm_campaign=oss)
 
 # Website
 
