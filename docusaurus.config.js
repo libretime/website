@@ -128,7 +128,13 @@ const config = {
           },
           {
             title: "More",
-            items: [vars.repository],
+            items: [
+              vars.repository,
+              {
+                label: "Website testing by Argos",
+                href: "https://argos-ci.com/",
+              },
+            ],
           },
         ],
         copyright: `Code licensed under AGPLv3; docs licensed under GPLv2.`,
