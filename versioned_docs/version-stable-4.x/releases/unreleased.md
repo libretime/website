@@ -2,9 +2,9 @@
 title: Unreleased
 ---
 
-import ReleaseHead from "./\_release-head.mdx";
+import ReleaseHead from './\_release-head.md';
 
-{/* <ReleaseHead date='2022-01-01' version='3.0.0-alpha.11'/> */}
+<!-- <ReleaseHead date='2022-01-01' version='3.0.0-alpha.11'/> -->
 
 ## :sparkling_heart: Contributors
 
@@ -22,7 +22,7 @@ Please see the [changelog](https://github.com/libretime/libretime/blob/main/CHAN
 
 ## :arrow_up: Before upgrading
 
-:::warning
+:::caution
 
 Please follow this **before the upgrade procedure**.
 

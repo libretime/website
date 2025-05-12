@@ -3,10 +3,10 @@ title: Install using the installer
 sidebar_position: 20
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import CodeBlock from "@theme/CodeBlock";
-import vars from "@site/vars";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+import vars from '@site/vars';
 
 This guide walk you though the steps required to install LibreTime on your system using the installer.
 
@@ -68,13 +68,15 @@ Download the [latest released](https://github.com/libretime/libretime/releases) 
 
 Or directly from the command-line:
 
-{/* prettier-ignore */}
-<CodeBlock language="bash">wget {"https://github.com/libretime/libretime/releases/download/" + vars.version + "/libretime-" + vars.version + ".tar.gz"}</CodeBlock>
+<CodeBlock language="bash">
+wget https://github.com/libretime/libretime/releases/download/{vars.version}/libretime-{vars.version}.tar.gz
+</CodeBlock>
 
 And extract the tarball:
 
-{/* prettier-ignore */}
-<CodeBlock language="bash">tar -xvf libretime-{vars.version}.tar.gz && cd libretime</CodeBlock>
+<CodeBlock language="bash">
+tar -xvf libretime-{vars.version}.tar.gz && cd libretime
+</CodeBlock>
 
 </TabItem>
 <TabItem label="Git repository" value="git">
@@ -86,7 +88,7 @@ git clone https://github.com/libretime/libretime
 cd libretime
 ```
 
-:::warning
+:::caution
 
 Don't use the https://github.com/libretime/libretime-debian-packaging repository, it's only used to create LibreTime packages.
 
@@ -106,7 +108,9 @@ git pull
 
 And checkout the latest version:
 
-<CodeBlock language="bash">git checkout {vars.version}</CodeBlock>
+<CodeBlock language="bash">
+git checkout {vars.version}
+</CodeBlock>
 
 </TabItem>
 </Tabs>
@@ -121,7 +125,7 @@ Install LibreTime with the following command, be sure to replace `https://libret
 sudo ./install https://libretime.example.org
 ```
 
-:::warning
+:::caution
 
 When upgrading be sure to run the installer using the same arguments you used during the initial install.
 
@@ -414,7 +418,7 @@ sudo systemctl restart libretime.target
 
 Once the setup is completed, log in the interface (with the default user `admin` and password `admin`), and edit the project settings (go to **Settings** > **General**) to match your needs.
 
-:::danger
+:::warning
 
 Remember to change your password.
 
